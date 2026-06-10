@@ -8,7 +8,11 @@ public class CrashDetector : MonoBehaviour
         int layerindex = LayerMask.NameToLayer("Floor");
         if (collision.gameObject.layer == layerindex)
         {
-            SceneManager.LoadScene(0);
+            Invoke("ReloadSceneCrash",1f);
         }
+    }
+    void ReloadSceneCrash()
+    {
+        SceneManager.LoadScene(0);
     }
 }
