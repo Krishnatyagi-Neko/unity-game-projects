@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
         if (moveVector.x < 0)
         {
             myRigidBody2D.AddTorque(torqueAmount);
-            print("hy");
         }
         else if (moveVector.x > 0)
         {
