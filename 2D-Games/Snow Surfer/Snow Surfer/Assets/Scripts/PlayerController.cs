@@ -1,30 +1,34 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
-{   
-    
+{
     [SerializeField] float torqueAmount = 1f;
-    InputAction moveAction;
-    Rigidbody2D myRigidBody2D;
-    Vector2 moveVector;
-    SurfaceEffector2D surfaceEffector2D;
-    [SerializeField] float BaseSpeed = 15f;
-    [SerializeField] float BoostSpeed = 200f;
+    [SerializeField] float baseSpeed = 15f;
+    [SerializeField] float boostSpeed = 20f;
 
+    InputAction moveAction;
+    Rigidbody2D myRigidbody2D;
+    SurfaceEffector2D surfaceEffector2D;
+
+    Vector2 moveVector;
+    bool canControlPlayer = true;
 
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
-        myRigidBody2D = GetComponent<Rigidbody2D>();
+        myRigidbody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindFirstObjectByType<SurfaceEffector2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        RotatePlayer();
-        BoostPlayer();
-        
+        if (canControlPlayer)
+        {
+            RotatePlayer();
+            BoostPlayer();
+        }
     }
 
     void RotatePlayer()
@@ -32,11 +36,11 @@ public class PlayerController : MonoBehaviour
         moveVector = moveAction.ReadValue<Vector2>();
         if (moveVector.x < 0)
         {
-            myRigidBody2D.AddTorque(torqueAmount);
+            myRigidbody2D.AddTorque(torqueAmount);
         }
         else if (moveVector.x > 0)
         {
-            myRigidBody2D.AddTorque(-torqueAmount);
+            myRigidbody2D.AddTorque(-torqueAmount);
         }
     }
 
@@ -44,12 +48,16 @@ public class PlayerController : MonoBehaviour
     {
         if (moveVector.y > 0)
         {
-            surfaceEffector2D.speed = BoostSpeed;
+            surfaceEffector2D.speed = boostSpeed;
         }
         else
         {
-            surfaceEffector2D.speed = BaseSpeed;
+            surfaceEffector2D.speed = baseSpeed;
         }
     }
 
+    public void DisableControls()
+    {
+        canControlPlayer = false;
+    }
 }

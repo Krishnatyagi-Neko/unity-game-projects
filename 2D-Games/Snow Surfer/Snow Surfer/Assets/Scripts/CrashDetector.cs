@@ -1,24 +1,33 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
+    [SerializeField] float restartDelay = 1f;
+    [SerializeField] ParticleSystem crashParticles;
 
+    PlayerController playerController;
 
-    [SerializeField] float ResDelay = 1f;
-    [SerializeField] ParticleSystem crashparticles;
+    void Start()
+    {
+        playerController = FindFirstObjectByType<PlayerController>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        int layerindex = LayerMask.NameToLayer("Floor");
-        if (collision.gameObject.layer == layerindex)
+        int layerIndex = LayerMask.NameToLayer("Floor");
+
+        if (collision.gameObject.layer == layerIndex)
         {
-            Invoke("ReloadScene",ResDelay);
-            crashparticles.Play();
+            playerController.DisableControls();
+            crashParticles.Play();
+            Invoke("ReloadScene", restartDelay);
         }
     }
+
     void ReloadScene()
     {
-
         SceneManager.LoadScene(0);
     }
 }
