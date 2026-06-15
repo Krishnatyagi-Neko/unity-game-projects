@@ -16,14 +16,15 @@ public class PlayerController : MonoBehaviour
     bool canControlPlayer = true;
     float previousRotation;
     float totalRotation;
-    int flipCount;
 
+    ScoreManager scoreManager;
 
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         myRigidbody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindFirstObjectByType<SurfaceEffector2D>();
+        scoreManager = FindAnyObjectByType<ScoreManager>();
     }
 
     void Update()
@@ -69,9 +70,8 @@ public class PlayerController : MonoBehaviour
 
     if (totalRotation > 340 || totalRotation < -340)
     {
-        flipCount += 1;
         totalRotation = 0;
-        print(flipCount);
+        scoreManager.AddScore(100);
     }
 
     previousRotation = currentRotation;
