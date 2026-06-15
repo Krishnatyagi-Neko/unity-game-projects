@@ -3414,9 +3414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   torqueAmount: 15
-  BaseSpeed: 18
-  BoostSpeed: 30
-  canControlPlayer: 0
+  baseSpeed: 15
+  boostSpeed: 20
 --- !u!114 &498465774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3429,11 +3428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f759b07992754a7418556ca959b00c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrashDetector
-  ResDelay: 1.18
-  crashparticles: {fileID: 1446297791}
-  floorLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  restartDelay: 1
+  crashParticles: {fileID: 1446297791}
 --- !u!58 &498465775
 CircleCollider2D:
   m_ObjectHideFlags: 0
