@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int AdditionalScore)
     {
         Score += AdditionalScore;
-        scoreText.text = "Score ; " + Score;
+        scoreText.text = "SCORE : " + Score;
     }
 
 }
