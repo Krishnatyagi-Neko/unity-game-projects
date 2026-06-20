@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float baseSpeed = 15f;
     [SerializeField] float boostSpeed = 20f;
     [SerializeField] ParticleSystem powerupparticles;
+    [SerializeField] ScoreManager scoreManager;
 
     InputAction moveAction;
     Rigidbody2D myRigidbody2D;
@@ -19,14 +20,13 @@ public class PlayerController : MonoBehaviour
     float totalRotation;
     int activePowerupCount;
 
-    ScoreManager scoreManager;
 
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         myRigidbody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindFirstObjectByType<SurfaceEffector2D>();
-        scoreManager = FindAnyObjectByType<ScoreManager>();
+       // scoreManager = FindAnyObjectByType<ScoreManager>();
     }
 
     void Update()
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-  void CalculateFlips()
+void CalculateFlips()
 {
     float currentRotation = transform.rotation.eulerAngles.z;
     
@@ -73,7 +73,10 @@ public class PlayerController : MonoBehaviour
     if (totalRotation > 340 || totalRotation < -340)
     {
         totalRotation = 0;
-        scoreManager.AddScore(100);
+        if (scoreManager != null)
+        {
+            scoreManager.AddScore(100);
+        }
     }
 
     previousRotation = currentRotation;
