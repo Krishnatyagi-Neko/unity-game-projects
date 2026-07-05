@@ -13667,9 +13667,17 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1869940393807280642, guid: 2d2318d57f3dacb42b5b6a2e9f60513d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5933618849036543629, guid: 2d2318d57f3dacb42b5b6a2e9f60513d, type: 3}
       propertyPath: m_Name
       value: Chicko (player)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022735997369067392, guid: 2d2318d57f3dacb42b5b6a2e9f60513d, type: 3}
+      propertyPath: jumpSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7431304439023525346, guid: 2d2318d57f3dacb42b5b6a2e9f60513d, type: 3}
       propertyPath: m_LocalPosition.x
