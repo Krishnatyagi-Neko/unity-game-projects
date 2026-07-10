@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,17 +106,42 @@ TextureImporter:
       name: Spikes_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 1
         y: 0
-        width: 745
-        height: 1024
+        width: 30
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: 14, y: -5.5}
+        - {x: 11, y: 8.5}
+        - {x: 8, y: 8.5}
+        - {x: 3, y: -6.5}
+        - {x: 3, y: -8.5}
+        - {x: 14, y: -8.5}
+      - - {x: 0, y: -5.5}
+        - {x: -3, y: 7.5}
+        - {x: -6, y: 7.5}
+        - {x: -13, y: -5.5}
+        - {x: -14, y: -8.5}
+        - {x: 0, y: -8.5}
+      - - {x: -4, y: 7.5}
+        - {x: -3, y: 7.5}
+        - {x: 2.8298187, y: 7.5}
+        - {x: 8, y: 7.5}
+        - {x: -4, y: 7.5}
+      - - {x: 0, y: -5.5}
+        - {x: 0, y: -5.5}
+        - {x: 0, y: -4.5}
+        - {x: 0, y: -4.5}
+      - - {x: 0, y: -5.5}
+        - {x: 1, y: -5.5}
+        - {x: 3, y: 7.5}
+        - {x: 0, y: 2.5}
+      tessellationDetail: 0
       bones: []
       spriteID: 0ca9e2f4d11505d50800000000000000
       internalID: 6723963429988506304
@@ -125,23 +150,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_1
+      name: Spikes_2
       rect:
         serializedVersion: 2
-        x: 771
+        x: 16
         y: 0
-        width: 734
-        height: 1024
+        width: 1
+        height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a28bb5edae484be90800000000000000
-      internalID: -7010832575621253078
+      spriteID: 652b0f861f4fb994f8b98f8e0e9c166e
+      internalID: -460916964
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d390f3728b72b8442920f1eb6804b889
     internalID: 0
     vertices: []
     indices: 
@@ -162,6 +187,7 @@ TextureImporter:
     nameFileIdTable:
       Spikes_0: 6723963429988506304
       Spikes_1: -7010832575621253078
+      Spikes_2: -460916964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
