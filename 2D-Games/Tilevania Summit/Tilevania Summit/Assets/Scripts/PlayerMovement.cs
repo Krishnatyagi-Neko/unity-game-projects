@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
         if(!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) {return;}
         if (value.isPressed )
         {
-            // Do stuff
             myRigidBody.linearVelocity += new Vector2(0f,jumpSpeed);
         }
     }
