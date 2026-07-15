@@ -15829,6 +15829,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3337418894869173311, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 375.9879
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337418894869173311, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 85.696
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337418894869173311, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -187.99892
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337418894869173311, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42.847687
+      objectReference: {fileID: 0}
     - target: {fileID: 5918471023750704843, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -15872,6 +15888,22 @@ PrefabInstance:
     - target: {fileID: 7441063649227135191, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985447461538924705, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985447461538924705, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549772770387369622, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549772770387369622, guid: 5464d428c895a7645b68adc057c2c588, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16233,11 +16265,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4468016245950796906, guid: 7eb57f49f1fed2a47b708afa5580c488, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.708481
+      value: -8.703548
       objectReference: {fileID: 0}
     - target: {fileID: 4468016245950796906, guid: 7eb57f49f1fed2a47b708afa5580c488, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.90091
+      value: 19.9009
       objectReference: {fileID: 0}
     - target: {fileID: 4468016245950796906, guid: 7eb57f49f1fed2a47b708afa5580c488, type: 3}
       propertyPath: m_LocalPosition.z

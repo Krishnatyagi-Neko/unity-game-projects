@@ -110,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
             myRigidBody.linearVelocity = deathKick;
             FindAnyObjectByType<GameSession>().ProcessPlayerDeath();
 
-
         }
     }
 
