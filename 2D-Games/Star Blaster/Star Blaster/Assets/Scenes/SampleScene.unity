@@ -311,8 +311,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8641295963297350075, guid: 6166cd54940ce9443a3fa6ec1c617575, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3690268373070044751}
   m_SourcePrefab: {fileID: 100100000, guid: 6166cd54940ce9443a3fa6ec1c617575, type: 3}
+--- !u!1 &3690268373070044750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8641295963297350075, guid: 6166cd54940ce9443a3fa6ec1c617575, type: 3}
+  m_PrefabInstance: {fileID: 3690268373070044749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3690268373070044751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3690268373070044750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a70f14cbc4cee43a48536789f4f437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 10
+  leftBoundPadding: 1
+  rightBoundPadding: 1
 --- !u!1001 &4871113066428275516
 PrefabInstance:
   m_ObjectHideFlags: 0
